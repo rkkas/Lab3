@@ -1,30 +1,29 @@
 public class Game {
     private String name;
-    private String category;
     private int price;
     private int quality;
+    private String category;
 
-    public Game(String name, String category, int price, int quality) {
+    public Game(String name, int price, int quality, String category) {
         this.name = name;
-        this.category = category;
         this.price = price;
         this.quality = quality;
+        this.category = category;
     }
 
     public String getName() { return name; }
-    public String getCategory() { return category; }
     public int getPrice() { return price; }
     public int getQuality() { return quality; }
+    public String getCategory() { return category; }
 
     @Override
     public String toString() {
-        return "Nombre: " + name + ", Categoría: " + category + 
-               ", Precio: " + price + ", Calidad: " + quality;
+        return "Nombre: " + name + ", Precio: " + price +
+               ", Calidad: " + quality + ", Categoría: " + category;
     }
 
-    // 🔹 Método main para prueba simple
     public static void main(String[] args) {
-        Game juego = new Game("GalaxyQuest", "Aventura", 29990, 85);
+        Game juego = new Game("GalaxyQuest", 29990, 85, "Aventura");
         System.out.println(juego);
     }
 }
